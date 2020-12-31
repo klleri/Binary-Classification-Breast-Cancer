@@ -19,7 +19,18 @@ pip install tensorflow
 
 ## 🔨 Usage
 
-To run the code, download the file, and open jupyter notebook to run the code. Execute the first cell to check whether the dependencies are installed properly. Then execute the rest of the code to visually observe the classification.
+##### Jupyter Notebook File 📚
+
+To run the code, download the file, and open jupyter notebook to run the code. 
+Execute the first cell to check whether the dependencies are installed properly. 
+Then execute the rest of the code to visually observe the classification.
+
+##### Python File 🐍 
+
+To run the code, dowload the file, use preferably Anaconda Spyder (or any IDE that you like).
+If in Spyder, execute the imports to check whether the dependencies are installed properly.
+Then execute the rest of the code to visually observe the classification, and if in spyder, use variable explorer to see better the values.
+
 
 ## 🔗 Links
 
