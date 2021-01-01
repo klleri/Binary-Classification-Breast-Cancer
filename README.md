@@ -1,6 +1,6 @@
 # Binary-Classification-Breast-Cancer
 
-Some binary classification machine learning codes with the objective to predict whether a diagnostic is showing a malignant or benign breast cancer
+Binary classification codes with the objective to predict whether a diagnostic is showing a malignant or benign breast cancer
 
 ## 📦 Install
 
