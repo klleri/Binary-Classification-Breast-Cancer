@@ -1,38 +1,22 @@
-# Binary-Classification-Breast-Cancer
+# Binary Classification for Breast Cancer Diagnosis using Keras
 
-Binary classification codes with the objective to predict whether a diagnostic is showing a malignant or benign breast cancer
+This project provides code for building and evaluating a binary classification model to predict breast cancer diagnosis using the Wisconsin Diagnostic Breast Cancer (WDBC) dataset and the Keras/TensorFlow deep learning libraries.
 
-## 📦 Install
+## ✨ Features
 
-```bash
-pip install pandas
-```
-```bash
-pip install Keras
-```
-```bash
-pip install sklearn
-```
-```bash
-pip install tensorflow
-```
+* Data loading and preprocessing specific to the WDBC dataset.
+* Implementation of a neural network model using Keras.
+* Model training and evaluation routines.
+* Visualization of results (if included in the code, e.g., confusion matrix, accuracy plots).
 
-## 🔨 Usage
+## 📊 Dataset
 
-##### Jupyter Notebook File 📚
+The model is trained on the **Breast Cancer Wisconsin (Diagnostic) Data Set**.
+* **Source:** UCI Machine Learning Repository
+* **Link:** [https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
+* **Description:** Features are computed from digitized images of fine needle aspirates (FNA) of breast masses, describing characteristics of the cell nuclei present. The goal is to classify tumors as malignant or benign.
 
-To run the code, download the file, and open jupyter notebook to run the code. 
-Execute the first cell to check whether the dependencies are installed properly. 
-Then execute the rest of the code to visually observe the classification.
+## 📋 Prerequisites
 
-##### Python File 🐍 
-
-To run the code, dowload the file, use preferably Anaconda Spyder  (or any IDE that you like, but if you're using other IDE, print the results or use the variable explorer).
-If in Spyder, execute the imports to check whether the dependencies are installed properly.
-Then execute the rest of the code to visually observe the classification, and if in spyder, use variable explorer to see better the values.
-
-
-## 🔗 Links
-
-- [Wisconsin Diagnostic Breast Cancer Data Base](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
-
+* Python (Version 3.7+ recommended)
+* Pip (Python package installer)
