@@ -11,9 +11,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam 
 
-# -----------------------------------------------------
+# -------------------------------
 # Configuration & Constants
-# -----------------------------------------------------
+# -------------------------------
 DATA_FILE = "wdbc.data" # Define filename as a constant
 TEST_SPLIT_SIZE = 0.25 # Proportion of data for testing
 RANDOM_STATE = 42 # For reproducible train/test splits
@@ -25,9 +25,9 @@ BATCH_SIZE = 32 # Common batch size default
 # First column is ID, second is Diagnosis, followed by 30 features.
 col_names = ['id', 'diagnosis'] + [f'feature_{i}' for i in range(1, 31)]
 
-# -----------------------------------------------------
+# ----------------------------
 # Load and Prepare Data
-# -----------------------------------------------------
+# ----------------------------
 print(f"Loading data from {DATA_FILE}...")
 # Assuming the .data file has no header row
 try:
@@ -55,9 +55,9 @@ target_encoded = label_encoder.fit_transform(target)
 # print(f"Target classes found: {label_encoder.classes_}") # Shows mapping ['B' 'M']
 # print(f"First 5 encoded targets: {target_encoded[:5]}")
 
-# -----------------------------------------------------
+# ----------------------------
 # Train/Test Split
-# -----------------------------------------------------
+# ----------------------------
 print(f"\nSplitting data into training and testing sets (Test size: {TEST_SPLIT_SIZE})...")
 X_train, X_test, y_train, y_test = train_test_split(
     features,
@@ -69,18 +69,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(f"Training features shape: {X_train.shape}")
 print(f"Testing features shape: {X_test.shape}")
 
-# -----------------------------------------------------
+# ---------------------------
 # Feature Scaling
-# -----------------------------------------------------
+# ---------------------------
 # Neural networks generally perform better with scaled features (mean=0, std=1)
 print("\nScaling features using StandardScaler...")
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train) # Fit and transform training data
 X_test_scaled = scaler.transform(X_test) # Only transform test data 
 
-# -----------------------------------------------------
+# ------------------------------
 # Build Neural Network Model
-# -----------------------------------------------------
+# -----------------------------
 print("\nBuilding the Neural Network model...")
 num_features = X_train_scaled.shape[1] # Get number of features dynamically
 
@@ -95,9 +95,9 @@ model.add(Dense(units=1, activation='sigmoid'))
 print("Model Summary:")
 model.summary()
 
-# -----------------------------------------------------
+# --------------------------
 # Compile Model
-# -----------------------------------------------------
+# ---------------------------
 print("\nCompiling the model...")
 # Define the optimizer (Adam is a good default)
 optimizer = Adam(learning_rate=LEARNING_RATE) 
@@ -107,9 +107,9 @@ model.compile(optimizer=optimizer,
               loss='binary_crossentropy', 
               metrics=['binary_accuracy'])
 
-# -----------------------------------------------------
+# -------------------------
 # Train Model
-# -----------------------------------------------------
+# -----------------------
 print(f"\nTraining the model for {EPOCHS} epochs with batch size {BATCH_SIZE}...")
 
 # Add EarlyStopping to prevent overfitting
@@ -127,9 +127,9 @@ history = model.fit(
 
 print("Model training finished.")
 
-# -----------------------------------------------------
+# --------------------------
 # Evaluate Model
-# -----------------------------------------------------
+# ------------------------
 print("\nEvaluating the model on the test set...")
 
 loss, accuracy = model.evaluate(X_test_scaled, y_test, verbose=0)
